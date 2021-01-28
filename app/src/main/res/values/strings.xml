@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Town Directory</string>
+    <string name="age">Age:</string>
+    <string name="error_config_NoNetworkConnection">Check your internet connection</string>
+    <string name="error_getting_inhabitants">getting inhabitants, sorry Hero u_u</string>
+    <string name="error_invalid_parameters">Invalid parameters</string>
+    <string name="error_request">There was a problem processing the request</string>
+    <string name="exception">¡An error occurred at %1$s!</string>
+    <string name="friends">Fiends:</string>
+    <string name="hair_color">Hair Color:</string>
+    <string name="height">Height:</string>
+    <string name="loading">Loading…</string>
+    <string name="name">Name:</string>
+    <string name="professions">Professions:</string>
+    <string name="weight">Weight:</string>
+</resources>

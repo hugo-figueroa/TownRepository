@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="inhabitant"
+            type="com.android.towndirectory.town.models.Inhabitant" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".town.ui.InhabitantInformationFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginMedium"
+                android:ellipsize="end"
+                android:text="@{inhabitant.name}"
+                android:textSize="@dimen/textLarge"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:text="Zedkin Quickbuster" />
+
+            <TextView
+                android:id="@+id/tvLabelAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginLarge"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:text="@string/age"
+                android:textSize="@dimen/textsMedium"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <TextView
+                android:id="@+id/tvAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginMedium"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:ellipsize="end"
+                android:text="@{Integer.toString(inhabitant.age)}"
+                android:textSize="@dimen/textsMedium"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelAge"
+                app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvLabelAge"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <TextView
+                android:id="@+id/tvLabelWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginLarge"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:text="@string/weight"
+                android:textSize="@dimen/textsMedium"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAge" />
+
+            <TextView
+                android:id="@+id/tvWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginMedium"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:ellipsize="end"
+                android:text="@{Double.toString(inhabitant.weight)}"
+                android:textSize="@dimen/textsMedium"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelWeight"
+                app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvLabelWeight"
+                app:layout_constraintTop_toBottomOf="@+id/tvAge" />
+
+            <TextView
+                android:id="@+id/tvLabelHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginLarge"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:text="@string/height"
+                android:textSize="@dimen/textsMedium"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvWeight" />
+
+            <TextView
+                android:id="@+id/tvHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginMedium"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:ellipsize="end"
+                android:text="@{Double.toString(inhabitant.height)}"
+                android:textSize="@dimen/textsMedium"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelHeight"
+                app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvLabelHeight"
+                app:layout_constraintTop_toBottomOf="@+id/tvWeight" />
+
+            <TextView
+                android:id="@+id/tvLabelHairColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginLarge"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:text="@string/hair_color"
+                android:textSize="@dimen/textsMedium"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeight" />
+
+            <View
+                android:id="@+id/viewHairColor"
+                android:layout_width="@dimen/hairViewSize"
+                android:layout_height="@dimen/hairViewSize"
+                android:layout_marginStart="@dimen/marginMedium"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelHairColor"
+                app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvLabelHairColor"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelHairColor" />
+
+            <TextView
+                android:id="@+id/tvLabelFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginLarge"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:text="@string/friends"
+                android:textSize="@dimen/textsMedium"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelHairColor" />
+
+            <ListView
+                android:id="@+id/lvFriends"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:layout_marginEnd="@dimen/marginLarge"
+                android:layout_marginBottom="@dimen/marginLarge"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/divider"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvLabelFriends"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelFriends"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tvLabelProfessions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginLarge"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:text="@string/professions"
+                android:textSize="@dimen/textsMedium"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline1"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <ListView
+                android:id="@+id/lvProfessions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:layout_marginEnd="@dimen/marginLarge"
+                android:layout_marginBottom="@dimen/marginLarge"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvLabelProfessions"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelProfessions"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/marginLarge"
+                android:layout_marginBottom="@dimen/marginLarge"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
