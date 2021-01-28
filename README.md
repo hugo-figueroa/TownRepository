@@ -18,6 +18,7 @@ A town of gnomes has many inhabitants, learn a little more about these creatures
 - Local Data (Room)
 - Navigation
 - Improve UI / UX
+- Unit Tests
 
 ### Architecture diagram
 
