@@ -1,4 +1,4 @@
-# TownRepository
+# Town Directory
 
 A town of gnomes has many inhabitants, learn a little more about these creatures in this application.
 
