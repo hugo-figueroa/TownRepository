@@ -22,4 +22,4 @@ A town of gnomes has many inhabitants, learn a little more about these creatures
 
 ### Architecture diagram
 
-![Architecture Flowchart](https://github.com/hugo-figueroa/TownRepository/blob/master/architecture.png)
+![Architecture Flowchart](https://github.com/hugo-figueroa/TownRepository/blob/master/architecture_flowchart.png)
